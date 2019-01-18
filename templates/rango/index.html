@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% load staticfiles%}
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Rango</title>
+        <!-- CSS -->
+        <link rel = "stylesheet" href="{% static 'css/base.css' %}" />
+        <!-- Javascript -->
+        <script src="{%static 'js/jquery.js' %}"></script>
+    </head>
+
+    <body>
+        <h1>Rango says...</h1>
+        <div>
+            hey there partner! <br />
+            <!--
+                boldmessage represents a template variable name that would be mapped with python variable.
+                This is called a "template context" which is a python dictionary
+             -->
+            <strong>{{ boldmessage }}</strong> <br />
+        </div>
+        <div>
+                <!-- a link to about page-->
+            <a href = "/rango/about/"> About </a> <br />
+                <!--Adding images -->
+            <img src="{% static 'images/rango.jpg' %}"
+                alt = "Picture of Rango" />
+        </div>
+    </body>
+
+</html>
