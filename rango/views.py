@@ -19,4 +19,4 @@ def index(request):
 
 # About Method
 def about(request):
-    return HttpResponse( 'Rango says hey there partner!' + '<br/> <a href="/rango/index/">Index Page</a>')
+    return render(request, 'rango/about.html')
