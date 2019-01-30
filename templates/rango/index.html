@@ -30,7 +30,11 @@
             <ul>
                 {% for category in categories %}
                     <li>
-                        <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
+                       <!-- <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>-->
+                       <!--Another way of representing url using template tags-->
+                        <a href="{% url 'show_category' category.slug %}">
+                            {{ category.name }}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
@@ -56,7 +60,9 @@
 
         <div>
                 <!-- a link to about page-->
-            <a href = "/rango/about/"> About Rango </a> <br />
+           <!-- <a href = "/rango/about/"> About Rango </a> <br /> -->
+            <!--To avoid repetition of url use the following instead-->
+            <a href = "{% url 'about' %}"> About </a> <br />
             <a href="/rango/add_category/">Add a New Category</a> <br />
                 <!--Adding images -->
             <img src="{% static 'images/rango.jpg' %}"
