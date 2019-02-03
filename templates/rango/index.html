@@ -6,9 +6,14 @@
 {% endblock %}
 
 {% block body_block %}
-        <h1>Rango says...</h1>
         <div>
-            hey there partner! <br />
+            <h1>Rango says...
+                {% if user.is_authenticated %}
+                    howdy {{ user.username }}
+                {% else %}
+                    hey there partner!
+                {% endif %}
+            </h1>
             <!--
                 boldmessage represents a template variable name that would be mapped with python variable.
                 This is called a "template context" which is a python dictionary
