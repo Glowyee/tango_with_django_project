@@ -23,7 +23,7 @@ def populate():
 
     django_pages = [
         {"title": "Official Django Tutorial",
-         "url": "https://docs.djangoproject.com/en/1.9/into/tutorial01/",
+         "url": "https://docs.djangoproject.com/en/1.9/intro/tutorial01/",
          "views": 64,},
         {"title": "Django Rocks",
          "url": "http://www.djangorocks.com/",
@@ -35,10 +35,10 @@ def populate():
 
     other_pages = [
         {"title": "Bottle",
-         "url": "http://bottlepy.org/docs/dev",
+         "url": "http://bottlepy.org/docs/dev/",
          "views": 32, },
         {"title": "Flask",
-         "url": "http://flask.pocco.org",
+         "url": "http://flask.pocoo.org/",
          "views": 32, }
     ]
 
